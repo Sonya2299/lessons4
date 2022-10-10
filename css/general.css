@@ -55,6 +55,7 @@ a {
 
 .header{
    background-color: #000000;
+   position: relative;
    
 
 }
@@ -62,10 +63,18 @@ a {
    display: flex;
    justify-content: space-between;
    align-items: center;  
+   flex-direction: row-reverse;
+}
+
+.header__logo{
+   position: absolute;
+   left:115px;
+   
 }
 
 .header__nav ul{
    display: flex;
+   
 }
 
 .header li{
@@ -97,8 +106,6 @@ a {
    height: 75px;
 
 }
-
-
 
 
 .main{
@@ -209,8 +216,9 @@ height: 58px;
    padding-top: 100px;
 }
  .tabs__label{
-   padding:10px 73px;
-   cursor:pointer;
+   text-align: center;
+   padding:10px 73px 10px 73px;
+  cursor:pointer;
    color:#333333;
  }
 
@@ -232,14 +240,25 @@ height: 58px;
    border-top: 1px #C6CBCD solid;
    border-left:  1px #C6CBCD solid;
    border-right: 1px #C6CBCD solid; ;
-   border-bottom: 2px white solid;
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
-   margin-bottom: -1px;
+   position: relative;
+   
  }
 
  .tabs__radio:checked+.tabs__label+.tabs__content{
    display:initial;
+ }
+
+ .tabs__radio:checked+.tabs__label:after{
+   content:'';
+   display: block;
+   width: 189px;
+   height: 1px;
+   background-color: #ffffff;
+   position: absolute;
+   bottom: -1px;
+   left: 0px;
  }
 
  .tabs__content__wrap{
@@ -253,6 +272,16 @@ height: 58px;
    padding-top: 41px;
    padding-bottom: 41px;
  }
+
+ .tabs__text{
+   width: 570px;
+  }
+  .tabs__text span{
+   display: block;
+  }
+.space{
+   padding-top:20px;
+}
 
  .tabblock .main__btn{
    background-color: #EC7979;
