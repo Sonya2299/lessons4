@@ -22,14 +22,14 @@ h2{
 }
 
 h3{
-   font-family: 'Open Sans';
+   font-family: 'Open Sans', sans-serif;
    font-weight: 700;
    font-size: 30px;
    line-height: 41px;  
 }
 
 h4{
-   font-family: 'Open Sans';
+   font-family: 'Open Sans', sans-serif;
    font-weight: 700;
    font-size: 24px;
    line-height: 33px;  
@@ -126,19 +126,7 @@ a {
    padding-bottom:185px;
 }
 
-.main__form{
-   display: flex;
-   justify-content: center;
-   width: 470px;
-   height: 450px;
-   background-color: white;
-   border-radius: 10px;
-}
 
-
- .main__form span{
-   color:#EC7979;
- }
 
 
 .main__title{
@@ -190,6 +178,88 @@ height: 58px;
    border-color: #AB4949;
    color:#FFFFFF
 
+}
+/* ФОРМА*/
+.form__title{
+   margin-top:35px;
+   margin-bottom: 46px;
+   text-align: center;
+
+}
+
+.form{
+   width: 470px;
+   height: 450px;
+   background-color: white;
+   border-radius: 10px;
+   position: relative;
+   
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"]{
+   width: 370px;
+   height: 50px;
+   display: block;
+   margin: 0 auto;
+   border: none;
+   border-bottom: 1px solid #BDBDBD;
+   outline:none;
+   padding-top:15px;    
+   
+}
+
+
+ .form span{
+   color:#EC7979;
+ }
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus{
+   width: 370px;
+   border-color:#EC7979;
+}
+
+
+
+.form input[type="text"]::placeholder,
+.form input[type="email"]::placeholder,
+.form input[type="password"]::placeholder{
+   font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   line-height: 19px;
+   font-weight: 400;
+   color:  #BDBDBD;  
+   
+}
+.form input[type="submit"]{
+   position: absolute;
+   bottom:0;
+   right: 0;
+   width: 100%;
+   height: 60px;
+   border-radius: 0 0 10px 10px;
+   border:none;
+   background-color: #EC7979;
+   color:#ffffff;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 600;
+   font-size: 15px;
+   line-height: 20px
+
+}
+
+.form input[type="submit"]:hover{
+   background: #AB4949;
+   transition-duration: 0.3s;
+   
+}
+
+.form input[type="submit"]:active{
+   background: #EC7979;
+   box-shadow: inset 0px 0px 10px #AB4949;
 }
 
 .social-media{
@@ -383,7 +453,7 @@ height: 58px;
 }
 
 .price__block__cost{
-   font-family: 'Raleway' sans-serif;
+   font-family: 'Raleway', sans-serif;
    font-weight: 700;
    font-size: 36px;
    line-height: 42px;
@@ -497,9 +567,7 @@ div .feedback__text:after{
 margin-bottom: 50px;
 }
 
-.contacts{
-      padding-bottom: 460px;
-   }
+
 
    .footer{
       background-color: #000000;
@@ -522,3 +590,81 @@ margin-bottom: 50px;
       color: rgba(255, 255, 255, 0.5);
       padding-bottom:27px;
    }
+
+.contacts{
+   padding-bottom:50px;
+}
+
+  
+
+   .form__contact input[type="text"],
+   .form__contact input[type="email"],
+   .form__contact input[type="password"]{
+      width: 570px;
+      padding:0;
+      height: 51px;
+      margin-top:34px
+
+   }
+    
+
+
+.form__contact input[type="text"]:focus,
+.form__contact input[type="email"]:focus,
+.form__contact input[type="password"]:focus{
+   width: 570px;
+   border-color:#EC7979;
+   
+}
+
+.form__contant__textarea{
+   display: flex;
+   align-items: flex-end;
+}
+
+.textarea{
+   width: 570px;
+   height: 206px;
+   border:none;
+   border-bottom: 1px solid #BDBDBD;
+   outline: none;
+   resize: none;
+   overflow: auto;
+   
+}   
+
+
+.textarea::placeholder{
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+line-height: 19px;
+color:  #BDBDBD;
+margin-top: 25px;
+}
+
+.form__contact{ 
+   width: 100%;
+   height: 100%;
+   margin-top: 39px;
+} 
+  
+.form__contact__input{
+   display: flex;
+   column-gap: 30px;
+
+}
+
+.form__contact input[type="submit"]{
+   display: block;
+   position: relative;
+   width: 370px;
+   height: 58px;
+   border-radius: 0;
+   margin:0 auto;
+   margin-top:50px;
+}
+
+.form__contact textarea:focus{
+   width: 570px;
+   border-color:#EC7979;
+}
