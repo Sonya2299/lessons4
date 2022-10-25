@@ -6,10 +6,14 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Мой первый проект</title>
+   <link rel="icon" href="img/favicon.ico">
+   <link rel="stylesheet" href="css/reset.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway&display=swap"
       rel="stylesheet">
-   <link rel="stylesheet" href="css/reset.css">
+
    <link rel="stylesheet" href="css/general.css">
+   <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -19,13 +23,19 @@
          <div class="header__logo">
             <img src="./img/logo.png" alt="logo">
          </div>
+
          <nav class="header__nav">
-            <ul>
-               <li><a class="header__nav__link" href="#">Features</a></li>
-               <li><a class="header__nav__link" href="#">About</a></li>
-               <li><a class="header__nav__link" href="#">Pricing</a></li>
-               <li><a class="header__nav__link" href="#">Reviews</a></li>
-               <li><a class="header__nav__link" href="#">Contact</a></li>
+            <ul class="header__nav__links">
+               <input type="checkbox" id="checkbox__burger">
+               <label for="checkbox__burger" class="header__burger"><span class="burger-line"></span></label>
+               <div class="menu">
+                  <li><a class="header__nav__link" href="#features">Features</a></li>
+                  <li><a class="header__nav__link" href="#about">About</a></li>
+                  <li><a class="header__nav__link" href="#pricing">Pricing</a></li>
+                  <li><a class="header__nav__link" href="#reviews">Reviews</a></li>
+                  <li><a class="header__nav__link" href="#contact">Contact</a></li>
+               </div>
+
             </ul>
          </nav>
       </div>
@@ -37,24 +47,22 @@
 
       <div class="container">
 
-         <div class="main__wrap">
-            <div class="main__logo">
-               <img src="./img/logobig.png" alt="logo">
-            </div>
-            <div class="main__content">
-               <h1 class="main__title">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES
-               </h1>
-               <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-               <a class="main__btn" href="#">Download</a>
-            </div>
+         <div class="main__content">
+            <img src="./img/logobig.png" alt="logo">
+            <h1 class="main__title">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES
+            </h1>
+            <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <a class="main__btn" href="#">Download</a>
          </div>
-         <form class="form">
-            <h3 class="form__title">Try Your <span>FREE</span> Trial Today</h3>
+
+         <form class="main__form">
+            <h4 class="form__title">Try Your <span>FREE</span> Trial Today</h4>
             <input type="text" name="Name" placeholder="Name">
             <input type="email" name="Email" placeholder="Email">
             <input type="password" name="Password" placeholder="Password">
             <input type="submit" value="Get Started">
          </form>
+
       </div>
    </section>
    <section class="social-media">
@@ -77,7 +85,7 @@
          </div>
       </div>
    </section>
-   <section class="tabblock">
+   <section id="features" class="tabblock">
       <div class="container">
          <div class="tabs">
             <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
@@ -152,7 +160,7 @@
       </div>
    </section>
 
-   <section class="awesome">
+   <section id="about" class="awesome">
       <div class="container">
          <div class="tit__block">
             <h2 class="tit__block__title">why this is awesome</h2>
@@ -199,7 +207,7 @@
    </section>
 
 
-   <section class="price">
+   <section id="pricing" class="price">
       <div class="container">
          <div class="tit__block">
             <h2 class="tit__block__title">pricing options</h2>
@@ -243,7 +251,7 @@
       </div>
 
    </section>
-   <section class="feedback">
+   <section id="reviews" class="feedback">
       <div class="container">
          <div class="tit__block">
             <h2 class="tit__block__title">what our customers are saying</h2>
@@ -259,7 +267,7 @@
                      quo suscipit.</p>
                </div>
                <div class="feedback__item">
-                  <div class="feedback__foto"><img src="img/Ellipse 7.png" alt="foto"></div>
+                  <div class="feedback__foto"><img src="./img/Ellipse 7.png" alt="foto"></div>
                   <div class="feedback__name">
                      <h4 class="feedback__name__title">Davis Rhiel Madsen</h4>
                      <p>Manager</p>
@@ -313,20 +321,21 @@
          </div>
       </div>
    </section>
-   <section class="contacts">
+   <section id="contact" class="contacts">
       <div class="container">
          <div class="tit__block">
             <h2 class="tit__block__title">contact us</h2>
             <p class="tit__block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
          </div>
-         <form class="form__contact">
-            <div class="form__contact__input">
-               <div><input type="text" name="Name" placeholder="Name">
+         <form class="contacts__form">
+            <div class="contacts__form__input">
+               <div>
+                  <input type="text" name="Name" placeholder="Name">
                   <input type="email" name="Email" placeholder="Email">
                   <input type="password" name="Password" placeholder="Password">
                </div>
-               <div class="form__contant__textarea"> <textarea class="textarea" name="text"
-                     placeholder="Message"></textarea> </div>
+
+               <textarea class="textarea" name="text" placeholder="Message"></textarea>
             </div>
             <input type="submit" value="Send Message">
          </form>
